@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Plinko"
+config/name="Plinkremental"
+run/main_scene="uid://bkugleqc5nuxy"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
