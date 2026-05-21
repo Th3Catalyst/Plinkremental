@@ -1,2 +1,7 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+
+# I just think that having git attributes in the language breakdown is really funny
+
+*.gitattributes linguist-language=gitattributes
+*.gitattributes linguist-detectable=true
