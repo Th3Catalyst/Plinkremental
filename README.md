@@ -1,0 +1,3 @@
+# Plinkremental
+
+Plinko idle game.
