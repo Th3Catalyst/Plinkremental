@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://t11qpjr62gkg" path="res://res/ball.png" id="1_7s4qf"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0e48y"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
+radius = 4.4079823
 
 [node name="Ball" type="Node2D" unique_id=127844270]
 
@@ -10,8 +11,8 @@
 position = Vector2(8.75, -8.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=137728603]
-scale = Vector2(0.2, 0.2)
-shape = SubResource("CircleShape2D_0e48y")
+scale = Vector2(20, 20)
+shape = SubResource("CircleShape2D_7s4qf")
 debug_color = Color(0, 0.6039216, 0.68235296, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1326193077]
