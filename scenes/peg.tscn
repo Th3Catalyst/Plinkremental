@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://4fw77gt3a7d8"]
 
-[ext_resource type="Shader" uid="uid://3v1n0cbvmlp7" path="res://shaders/saturation.gdshader" id="1_j6u4k"]
+[ext_resource type="Shader" uid="uid://kapptw4p7722" path="res://shaders/default.gdshader" id="1_j6u4k"]
 [ext_resource type="Texture2D" uid="uid://t11qpjr62gkg" path="res://res/ball.png" id="2_upqsn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upqsn"]
 shader = ExtResource("1_j6u4k")
+shader_parameter/hue_shift = 0.0
 shader_parameter/saturation = 0.7170000340575
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j6u4k"]
