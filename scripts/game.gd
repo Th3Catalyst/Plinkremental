@@ -18,7 +18,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _input(event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_SPACE):
 		var ball: Node2D = Game.ball_scene.instantiate()
 		add_child(ball)
