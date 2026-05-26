@@ -2,5 +2,33 @@
 
 [ext_resource type="Script" uid="uid://c6cfqli2h5rvh" path="res://scripts/createPegs.gd" id="2_h2yge"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
+font_size = 200
+font_color = Color(0, 0, 0, 1)
+outline_size = 80
+outline_color = Color(1, 0.8833333, 0, 1)
+shadow_size = 50
+shadow_color = Color(0, 0, 0, 0.41960785)
+shadow_offset = Vector2(20, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
+font_size = 70
+
 [node name="Main" type="Node2D" unique_id=633216226]
 script = ExtResource("2_h2yge")
+
+[node name="Title_text" type="Label" parent="." unique_id=255507853]
+offset_left = 271.0
+offset_right = 1894.0
+offset_bottom = 273.0
+text = "Plinkremental"
+label_settings = SubResource("LabelSettings_ig7tw")
+
+[node name="SPACE_text" type="Label" parent="." unique_id=1144168880]
+offset_left = 2400.0
+offset_top = 200.0
+offset_right = 3400.0
+offset_bottom = 296.0
+text = "Press SPACE to drop a ball"
+label_settings = SubResource("LabelSettings_0xm2m")
+horizontal_alignment = 1
