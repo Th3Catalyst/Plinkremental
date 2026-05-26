@@ -7,7 +7,7 @@ friction = 0.06
 bounce = 0.8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
-radius = 4.4079823
+radius = 22.0
 
 [node name="Ball" type="Node2D" unique_id=127844270]
 
@@ -17,11 +17,10 @@ physics_material_override = SubResource("PhysicsMaterial_7s4qf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=137728603]
 position = Vector2(-8.749999, 8.249999)
-scale = Vector2(7, 7)
 shape = SubResource("CircleShape2D_7s4qf")
 debug_color = Color(0, 0.6039216, 0.68235296, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1326193077]
 position = Vector2(-8.75, 8.25)
-scale = Vector2(0.07, 0.07)
+scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_7s4qf")
