@@ -31,7 +31,7 @@ void fragment() {
     // Add the hue shift and wrap around using fract()
     hsv.x = fract(hsv.x + (hue_shift / 360.0));
 	
-	//
+	// saturation
 	hsv *= saturation;
 	hsv.z = clamp(hsv.y, 0.0, 1.0);
 	hsv.y = 0.0;
