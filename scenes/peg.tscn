@@ -9,7 +9,7 @@ shader_parameter/hue_shift = 0.0
 shader_parameter/saturation = 0.7170000340575
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j6u4k"]
-radius = 4.3046484
+radius = 6.5
 
 [node name="Peg" type="Node2D" unique_id=1606382892]
 
@@ -18,7 +18,7 @@ collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1119656742]
 material = SubResource("ShaderMaterial_upqsn")
-scale = Vector2(0.025, 0.025)
+scale = Vector2(0.04, 0.04)
 texture = ExtResource("2_upqsn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1267671287]

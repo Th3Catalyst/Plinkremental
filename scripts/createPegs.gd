@@ -21,13 +21,11 @@ func _ready() -> void:
 				child.scale *= spacing_h/100
 			peg.position = Vector2(center-(spacing_h/2)*i+spacing_h*(j-1), top+spacing_v*i)
 
-
 func _input(ev):
 	if Input.is_key_pressed(KEY_SPACE):
 		$SPACE_text.visible = false
 		var ball: Node2D = ball_scene.instantiate()
 		add_child(ball)
-		
 		ball.position = Vector2(center+randf_range(-spacing_h*0.7,spacing_h*0.7), 0)
 		for child in ball.get_child(0).get_children():
 			child.scale *= spacing_h/100
