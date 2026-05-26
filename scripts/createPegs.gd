@@ -11,8 +11,9 @@ var spacing_v: int = height/rows
 var spacing_h: int = spacing_v/sqrt(0.75)
 
 
-
 func _ready() -> void:
+	Game.pegs_center = center
+	
 	for i in range(rows):
 		for j in range(3+i):
 			var peg: Node2D = peg_scene.instantiate()
@@ -21,7 +22,7 @@ func _ready() -> void:
 				child.scale *= spacing_h/100
 			peg.position = Vector2(center-(spacing_h/2)*i+spacing_h*(j-1), top+spacing_v*i)
 
-func _input(ev):
+func _input(event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_SPACE):
 		$SPACE_text.visible = false
 		var ball: Node2D = ball_scene.instantiate()
