@@ -1,4 +1,3 @@
-
 extends Node2D
 
 var peg_scene: PackedScene = preload("res://scenes/peg.tscn")
