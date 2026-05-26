@@ -17,9 +17,9 @@ radius = 4.3046484
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1119656742]
 material = SubResource("ShaderMaterial_upqsn")
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.02, 0.02)
 texture = ExtResource("2_upqsn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1267671287]
-scale = Vector2(10, 10)
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_j6u4k")
