@@ -1,5 +1,8 @@
 extends Node
 
+var peg_scene: PackedScene = preload("res://scenes/peg.tscn")
+var ball_scene: PackedScene = preload("res://scenes/ball.tscn")
+
 var pegs_center: float
 var money: float
 
