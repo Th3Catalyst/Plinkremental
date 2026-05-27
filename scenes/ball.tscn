@@ -1,27 +1,35 @@
 [gd_scene format=3 uid="uid://bkugleqc5nuxy"]
 
 [ext_resource type="Texture2D" uid="uid://t11qpjr62gkg" path="res://res/ball.png" id="1_7s4qf"]
+[ext_resource type="Shader" uid="uid://kapptw4p7722" path="res://shaders/default.gdshader" id="1_cxlvu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7s4qf"]
-friction = 0.31
-bounce = 0.3
+friction = 0.48
+bounce = 0.15
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
 radius = 22.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f7cbr"]
+shader = ExtResource("1_cxlvu")
+shader_parameter/hue_shift = 0.0
+shader_parameter/saturation = 1.0
+shader_parameter/value = 0.8550000406125
+
 [node name="Ball" type="Node2D" unique_id=127844270]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1436180884]
+[node name="BallBody" type="RigidBody2D" parent="." unique_id=1436180884]
 position = Vector2(8.75, -8.25)
-collision_mask = 2
+collision_mask = 6
 physics_material_override = SubResource("PhysicsMaterial_7s4qf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=137728603]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BallBody" unique_id=137728603]
 position = Vector2(-8.749999, 8.249999)
 shape = SubResource("CircleShape2D_7s4qf")
 debug_color = Color(0, 0.6039216, 0.68235296, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1326193077]
+[node name="Sprite2D" type="Sprite2D" parent="BallBody" unique_id=1326193077]
+material = SubResource("ShaderMaterial_f7cbr")
 position = Vector2(-8.75, 8.25)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_7s4qf")

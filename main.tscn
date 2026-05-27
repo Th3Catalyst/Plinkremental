@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://byestxbrld871"]
 
-[ext_resource type="Script" uid="uid://c6cfqli2h5rvh" path="res://scripts/createPegs.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://dkhbj4xo45tvr" path="res://scripts/setLabel.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://c6cfqli2h5rvh" path="res://scripts/createBoard.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://cc80gtv4jnbsq" path="res://scripts/gainMoney.gd" id="3_h2yge"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
 font_size = 200
@@ -13,6 +15,9 @@ shadow_offset = Vector2(20, 20)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
 font_size = 70
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(2417, 120)
 
 [node name="Main" type="Node2D" unique_id=633216226]
 script = ExtResource("2_h2yge")
@@ -32,3 +37,22 @@ offset_bottom = 296.0
 text = "Press SPACE to drop a ball"
 label_settings = SubResource("LabelSettings_0xm2m")
 horizontal_alignment = 1
+
+[node name="money_text" type="Label" parent="." unique_id=1351034708]
+offset_left = 281.0
+offset_top = 262.0
+offset_right = 1281.0
+offset_bottom = 358.0
+text = "Money: 0"
+label_settings = SubResource("LabelSettings_0xm2m")
+script = ExtResource("2_0xm2m")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=774624114]
+position = Vector2(281, 262)
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("3_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1028714740]
+position = Vector2(2518.5, 1654)
+shape = SubResource("RectangleShape2D_1bvp3")

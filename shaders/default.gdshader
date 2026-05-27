@@ -3,7 +3,10 @@
 shader_type canvas_item;
 
 uniform float hue_shift : hint_range(0.0, 360.0) = 0.0;
-uniform float saturation : hint_range(0.0, 2.0) = 1.0;
+// Added by a person
+uniform float saturation : hint_range(0.0, 1.0) = 1.0;
+uniform float value : hint_range(0.0, 1.0) = 1.0;
+// End addition
 
 vec3 rgb_to_hsv(vec3 c) {
     vec4 K = vec4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
@@ -20,21 +23,20 @@ vec3 hsv_to_rgb(vec3 c) {
     return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
 }
 
-void vertex() {
-	// Called for every vertex the material is visible on.
-}
 
 void fragment() {
     vec4 tex_color = texture(TEXTURE, UV);
     vec3 hsv = rgb_to_hsv(tex_color.rgb);
     
+	
     // Add the hue shift and wrap around using fract()
     hsv.x = fract(hsv.x + (hue_shift / 360.0));
 	
-	// saturation
-	hsv *= saturation;
-	hsv.z = clamp(hsv.y, 0.0, 1.0);
-	hsv.y = 0.0;
+	// Added by a person
+	hsv.y *= saturation;
+	hsv.z *= value;
+	// End addition
+	
     
     COLOR = vec4(hsv_to_rgb(hsv), tex_color.a);
 }
@@ -42,4 +44,8 @@ void fragment() {
 //void light() {
 //	// Called for every pixel for every light affecting the CanvasItem.
 //	// Uncomment to replace the default light processing function with this one.
+//}
+//
+//void vertex() {
+//	// Called for every vertex the material is visible on.
 //}

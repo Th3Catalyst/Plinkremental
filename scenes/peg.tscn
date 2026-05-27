@@ -6,7 +6,8 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upqsn"]
 shader = ExtResource("1_j6u4k")
 shader_parameter/hue_shift = 0.0
-shader_parameter/saturation = 0.7170000340575
+shader_parameter/saturation = 0.0
+shader_parameter/value = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j6u4k"]
 radius = 6.5
@@ -24,3 +25,4 @@ texture = ExtResource("2_upqsn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1267671287]
 scale = Vector2(2.5, 2.5)
 shape = SubResource("CircleShape2D_j6u4k")
+debug_color = Color(0, 0.5950001, 0.7, 0)
