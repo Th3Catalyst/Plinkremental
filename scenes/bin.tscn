@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://btiw712orkf5n"]
 
 [ext_resource type="Texture2D" uid="uid://w45hmr5oomm2" path="res://res/finalBin.png" id="2_688sc"]
+[ext_resource type="AudioStream" uid="uid://byw61e2eaj1hp" path="res://res/ballDrop.wav" id="3_j2wrr"]
 [ext_resource type="Script" uid="uid://cc80gtv4jnbsq" path="res://scripts/gainMoney.gd" id="3_kk33v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kk33v"]
@@ -68,3 +69,6 @@ text = "100"
 label_settings = SubResource("LabelSettings_688sc")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Area2D" unique_id=668233982]
+stream = ExtResource("3_j2wrr")
