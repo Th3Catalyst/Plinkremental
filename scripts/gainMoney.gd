@@ -5,4 +5,6 @@ func _ready():
 
 func _on_body_entered(body: RigidBody2D) -> void:
 	if body.name == "BallBody":
-		Game.money += 100
+		var ball: Node2D = body.get_parent()
+		Game.money += ball.get_meta("Value") * $".".get_parent().get_meta("multiplier")
+		ball.queue_free()

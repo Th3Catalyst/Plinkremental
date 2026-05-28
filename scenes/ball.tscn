@@ -4,8 +4,8 @@
 [ext_resource type="Shader" uid="uid://kapptw4p7722" path="res://shaders/default.gdshader" id="1_cxlvu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7s4qf"]
-friction = 0.48
-bounce = 0.15
+friction = 0.36
+bounce = 0.45
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
 radius = 22.0
@@ -17,11 +17,13 @@ shader_parameter/saturation = 1.0
 shader_parameter/value = 0.8550000406125
 
 [node name="Ball" type="Node2D" unique_id=127844270]
+metadata/value = 0.0
 
 [node name="BallBody" type="RigidBody2D" parent="." unique_id=1436180884]
 position = Vector2(8.75, -8.25)
 collision_mask = 6
 physics_material_override = SubResource("PhysicsMaterial_7s4qf")
+gravity_scale = 1.41
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BallBody" unique_id=137728603]
 position = Vector2(-8.749999, 8.249999)

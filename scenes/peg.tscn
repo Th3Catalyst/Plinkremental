@@ -10,7 +10,7 @@ shader_parameter/saturation = 0.0
 shader_parameter/value = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j6u4k"]
-radius = 6.5
+radius = 6.7999997
 
 [node name="Peg" type="Node2D" unique_id=1606382892]
 
