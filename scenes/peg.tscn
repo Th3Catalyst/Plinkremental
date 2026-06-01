@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4fw77gt3a7d8"]
 
 [ext_resource type="Shader" uid="uid://kapptw4p7722" path="res://shaders/default.gdshader" id="1_j6u4k"]
-[ext_resource type="Texture2D" uid="uid://t11qpjr62gkg" path="res://res/ball.png" id="2_upqsn"]
+[ext_resource type="Texture2D" uid="uid://d80exfcpc2hm" path="res://res/ballFinal.png" id="2_j6u4k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_upqsn"]
 shader = ExtResource("1_j6u4k")
@@ -19,8 +19,8 @@ collision_layer = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1119656742]
 material = SubResource("ShaderMaterial_upqsn")
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("2_upqsn")
+scale = Vector2(1.0625, 1.0625)
+texture = ExtResource("2_j6u4k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1267671287]
 scale = Vector2(2.5, 2.5)
