@@ -15,6 +15,18 @@ shadow_offset = Vector2(20, 20)
 [sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
 font_size = 70
 
+[sub_resource type="SystemFont" id="SystemFont_0xm2m"]
+font_weight = 999
+
+[sub_resource type="Theme" id="Theme_h2yge"]
+default_base_scale = 1.5
+default_font = SubResource("SystemFont_0xm2m")
+default_font_size = 15
+
+[sub_resource type="SystemFont" id="SystemFont_h2yge"]
+font_weight = 999
+msdf_size = 100
+
 [node name="Main" type="Node2D" unique_id=633216226]
 script = ExtResource("2_h2yge")
 
@@ -42,3 +54,15 @@ offset_bottom = 358.0
 text = "Money: 200"
 label_settings = SubResource("LabelSettings_0xm2m")
 script = ExtResource("2_0xm2m")
+
+[node name="bet_input" type="LineEdit" parent="." unique_id=1475456753]
+offset_left = 319.0
+offset_top = 385.0
+offset_right = 703.0
+offset_bottom = 520.0
+theme = SubResource("Theme_h2yge")
+theme_override_fonts/font = SubResource("SystemFont_h2yge")
+theme_override_font_sizes/font_size = 55
+placeholder_text = "Bet Amount"
+virtual_keyboard_enabled = false
+virtual_keyboard_show_on_focus = false
