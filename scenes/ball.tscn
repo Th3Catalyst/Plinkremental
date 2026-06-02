@@ -12,9 +12,6 @@ radius = 22.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f7cbr"]
 shader = ExtResource("1_cxlvu")
-shader_parameter/hue_shift = 0.0
-shader_parameter/saturation = 1.0
-shader_parameter/value = 1.0
 
 [node name="Ball" type="Node2D" unique_id=127844270]
 metadata/value = 0.0

@@ -2,10 +2,10 @@
 
 shader_type canvas_item;
 
-uniform float hue_shift : hint_range(0.0, 360.0) = 0.0;
+instance uniform float hue_shift : hint_range(0.0, 360.0) = 0.0;
 // Added by a person
-uniform float saturation : hint_range(0.0, 1.0) = 1.0;
-uniform float value : hint_range(0.0, 1.0) = 1.0;
+instance uniform float saturation : hint_range(0.0, 1.0) = 1.0;
+instance uniform float value : hint_range(0.0, 1.0) = 1.0;
 // End addition
 
 vec3 rgb_to_hsv(vec3 c) {
