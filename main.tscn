@@ -1,68 +1,85 @@
 [gd_scene format=3 uid="uid://byestxbrld871"]
 
 [ext_resource type="Script" uid="uid://dkhbj4xo45tvr" path="res://scripts/setLabel.gd" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://xr7a3wt2pgur" path="res://res/8bitFONT.ttf" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://c6cfqli2h5rvh" path="res://scripts/createBoard.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://bp0iqk7y30uew" path="res://dropBall.gd" id="3_h2yge"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
-font_size = 200
-font_color = Color(0, 0, 0, 1)
-outline_size = 80
-outline_color = Color(1, 0.8833333, 0, 1)
+font = ExtResource("2_1bvp3")
+font_size = 300
+font_color = Color(1, 0.94066674, 0.110000014, 1)
+outline_size = 87
+outline_color = Color(0.66, 0.47300005, 0, 1)
 shadow_size = 50
-shadow_color = Color(0, 0, 0, 0.41960785)
-shadow_offset = Vector2(20, 20)
+shadow_color = Color(0.46, 0.46, 0.46, 0.28235295)
+shadow_offset = Vector2(30, 30)
 
 [sub_resource type="LabelSettings" id="LabelSettings_0xm2m"]
-font_size = 70
+font = ExtResource("2_1bvp3")
+font_size = 150
+font_color = Color(1, 0.8333334, 0, 1)
+outline_size = 50
+outline_color = Color(0.55, 0.33, 0.022000013, 1)
 
-[sub_resource type="SystemFont" id="SystemFont_0xm2m"]
-font_weight = 999
-
-[sub_resource type="Theme" id="Theme_h2yge"]
-default_base_scale = 1.5
-default_font = SubResource("SystemFont_0xm2m")
-default_font_size = 15
-
-[sub_resource type="SystemFont" id="SystemFont_h2yge"]
-font_weight = 999
-msdf_size = 100
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(0.73, 0.5475, 0, 0.44313726)
+border_color = Color(0.63, 0.50337, 0.20789999, 1)
+corner_detail = 20
+expand_margin_left = 10.0
 
 [node name="Main" type="Node2D" unique_id=633216226]
 script = ExtResource("2_h2yge")
 
-[node name="Title_text" type="Label" parent="." unique_id=255507853]
-offset_left = 271.0
-offset_right = 1894.0
-offset_bottom = 273.0
+[node name="ColorRect" type="ColorRect" parent="." unique_id=388751629]
+offset_right = 3989.0
+offset_bottom = 1994.0
+color = Color(0, 0, 0, 1)
+
+[node name="TitleText" type="Label" parent="." unique_id=255507853]
+offset_left = 257.0
+offset_top = 60.0
+offset_right = 2083.0
+offset_bottom = 333.0
 text = "Plinkremental"
 label_settings = SubResource("LabelSettings_ig7tw")
 
-[node name="SPACE_text" type="Label" parent="." unique_id=1144168880]
-offset_left = 2400.0
-offset_top = 200.0
-offset_right = 3400.0
-offset_bottom = 296.0
+[node name="SpaceText" type="Label" parent="." unique_id=1144168880]
+offset_left = 2300.0
+offset_top = 220.0
+offset_right = 3900.0
+offset_bottom = 306.0
+scale = Vector2(0.8, 0.8)
 text = "Press SPACE to drop a ball"
 label_settings = SubResource("LabelSettings_0xm2m")
 horizontal_alignment = 1
 
-[node name="money_text" type="Label" parent="." unique_id=1351034708]
+[node name="MoneyText" type="Label" parent="." unique_id=1351034708]
 offset_left = 281.0
-offset_top = 262.0
+offset_top = 302.0
 offset_right = 1281.0
-offset_bottom = 358.0
-text = "Money: 200"
+offset_bottom = 398.0
+text = "Money: $200"
 label_settings = SubResource("LabelSettings_0xm2m")
 script = ExtResource("2_0xm2m")
 
-[node name="bet_input" type="LineEdit" parent="." unique_id=1475456753]
-offset_left = 319.0
-offset_top = 385.0
-offset_right = 703.0
-offset_bottom = 520.0
-theme = SubResource("Theme_h2yge")
-theme_override_fonts/font = SubResource("SystemFont_h2yge")
-theme_override_font_sizes/font_size = 55
-placeholder_text = "Bet Amount"
-virtual_keyboard_enabled = false
-virtual_keyboard_show_on_focus = false
+[node name="BetText" type="Label" parent="." unique_id=490760905]
+offset_left = 280.0
+offset_top = 453.0
+offset_right = 629.0
+offset_bottom = 549.0
+text = "Bet: $"
+label_settings = SubResource("LabelSettings_0xm2m")
+
+[node name="BetInput" type="LineEdit" parent="." unique_id=1475456753]
+offset_left = 653.0
+offset_top = 435.0
+offset_right = 998.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(1, 0.8333334, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_1bvp3")
+theme_override_font_sizes/font_size = 117
+theme_override_styles/normal = SubResource("StyleBoxFlat_1bvp3")
+text = "10"
+script = ExtResource("3_h2yge")
