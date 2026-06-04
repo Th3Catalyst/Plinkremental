@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://00ren4c2ypxj"]
+
+[node name="Autobet" type="Node2D" unique_id=1550706414]
+
+[node name="Button" type="Button" parent="." unique_id=740273939]
+offset_left = -68.0
+offset_top = -33.0
+offset_right = 68.0
+offset_bottom = 34.0
