@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://00ren4c2ypxj"]
 
+[ext_resource type="Texture2D" uid="uid://bsemgb0a3asvd" path="res://res/autoOn.png" id="1_6peuo"]
+[ext_resource type="Script" uid="uid://bf2mwkris0mtt" path="res://scenes/button.gd" id="2_7q5ak"]
+
 [node name="Autobet" type="Node2D" unique_id=1550706414]
 
 [node name="Button" type="Button" parent="." unique_id=740273939]
-offset_left = -68.0
-offset_top = -33.0
-offset_right = 68.0
-offset_bottom = 34.0
+offset_left = -494.0
+offset_top = -250.0
+offset_right = 494.0
+offset_bottom = 253.0
+icon = ExtResource("1_6peuo")
+script = ExtResource("2_7q5ak")

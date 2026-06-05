@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://xr7a3wt2pgur" path="res://res/8bitFONT.ttf" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://c6cfqli2h5rvh" path="res://scripts/createBoard.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://bp0iqk7y30uew" path="res://dropBall.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://00ren4c2ypxj" path="res://scenes/autobet.tscn" id="5_lquwl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
 font = ExtResource("2_1bvp3")
@@ -45,6 +46,7 @@ text = "Plinkremental"
 label_settings = SubResource("LabelSettings_ig7tw")
 
 [node name="SpaceText" type="Label" parent="." unique_id=1144168880]
+visible = false
 offset_left = 2300.0
 offset_top = 220.0
 offset_right = 3900.0
@@ -83,3 +85,7 @@ theme_override_font_sizes/font_size = 117
 theme_override_styles/normal = SubResource("StyleBoxFlat_1bvp3")
 text = "10"
 script = ExtResource("3_h2yge")
+
+[node name="Autobet" parent="." unique_id=1550706414 instance=ExtResource("5_lquwl")]
+position = Vector2(554, 782)
+scale = Vector2(0.6, 0.6)

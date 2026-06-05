@@ -12,6 +12,7 @@ var spacing_v: float = height/rows
 var spacing_h: float = spacing_v/sqrt(0.75)
 
 signal label_change
+signal drop
 var money: float = 200:
 	set = set_money
 
