@@ -13,8 +13,10 @@ var spacing_h: float = spacing_v/sqrt(0.75)
 
 signal label_change
 signal drop
-var money: float = 200:
+var money: float = 200.0:
 	set = set_money
+
+var ball_costs: Array[float] = [1.0, 5.0, 10.0, 15.0, 20.0, 50.0, 100.0]
 
 func set_money(new_money: float) -> void:
 	money = round(new_money*100)/100
