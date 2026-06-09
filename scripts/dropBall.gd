@@ -32,6 +32,5 @@ func drop_ball() -> void:
 		$".".get_parent().add_child(ball)
 		ball.position = ball_position
 		for child in ball.get_child(0).get_children():
-			print(type_string(typeof(child)))
 			if str(child.name)[-2] == "2":
 				child.scale *= Game.spacing_h/110
