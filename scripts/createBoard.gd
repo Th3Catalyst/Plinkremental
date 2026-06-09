@@ -1,7 +1,5 @@
 extends Node2D
 
-
-
 func _ready() -> void:
 	# Pegs
 	for i in range(Game.rows):
@@ -14,7 +12,7 @@ func _ready() -> void:
 				Game.center-(Game.spacing_h/2)*i+Game.spacing_h*(j-2), 
 				Game.top+Game.spacing_v*i
 			)
-			
+
 	# Bins
 	for i in range(Game.rows+3):
 		var bin = Game.bin_scene.instantiate()

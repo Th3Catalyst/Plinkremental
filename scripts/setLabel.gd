@@ -1,6 +1,5 @@
 extends Label
 
-
 func set_label(money: float) -> void:
 	$".".text = "Money: $%s " % [int(money)]
 	
