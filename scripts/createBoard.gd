@@ -1,6 +1,6 @@
 extends Node2D
 
-var mult_vals: Array[float] = [110,41,10,5,3,1.5,1,0.7,0.3,0.3,0.7,1,1.5,3,5,10,41,110]
+
 
 func _ready() -> void:
 	# Pegs
@@ -19,16 +19,42 @@ func _ready() -> void:
 	for i in range(Game.rows+3):
 		var bin = Game.bin_scene.instantiate()
 		add_child(bin)
-		bin.set_meta("multiplier", mult_vals[i])
-		if mult_vals[i] < 1:
-			bin.get_child(1).get_child(1).text = str(mult_vals[i]) + "x"
+		Game.bins.push_front(bin)
+		bin.set_meta("multiplier", Game.mult_vals[i])
+		if Game.mult_vals[i] < 100:
+			bin.get_child(1).get_child(1).text = str(round(Game.mult_vals[i]*10)/10) + "x"
 		else:
-			bin.get_child(1).get_child(1).text = str(int(mult_vals[i])) + "x"
+			bin.get_child(1).get_child(1).text = str(int(Game.mult_vals[i])) + "x"
 		bin.position = Vector2(
 			Game.center-((Game.rows+2)/2)*Game.spacing_h + Game.spacing_h*i, 
 			Game.top+Game.height
 		)
-
-func _input(_event: InputEvent) -> void:
-	if Input.is_key_pressed(KEY_SPACE):
-		$SpaceText.visible = false
+	
+	# Upgrades
+	var label_y: int = 1300
+	for upgrade_key in Game.upgrades:
+		var value: Dictionary = Game.upgrades[upgrade_key]
+		
+		var upgrade_label: Label = Label.new()
+		upgrade_label.text = upgrade_key + ": $" + str(value["cost"])
+		upgrade_label.position = Vector2(259, label_y)
+		upgrade_label.label_settings = load("res://res/mainTextStyle.tres")
+		add_child(upgrade_label)
+		
+		var upgrade_button: Button = Button.new()
+		
+		var button_press: Callable = func(): 
+			if Game.money >= value["cost"]:
+				Game.money -= value["cost"]
+				value["cost"] = int(value["cost"] * 1.3)
+				upgrade_label.text = upgrade_key + ": $" + str(value["cost"])
+				value["effect"].call()
+		
+		upgrade_button.icon = load("res://res/upgradeOn.png")
+		upgrade_button.position = Vector2(1559, label_y - 10)
+		upgrade_button.scale *= 0.25
+		upgrade_button.pressed.connect(button_press)
+		add_child(upgrade_button)
+		
+		label_y += 130
+		

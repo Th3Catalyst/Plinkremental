@@ -6,10 +6,10 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7s4qf"]
 friction = 0.34
-bounce = 0.46
+bounce = 0.43
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
-radius = 22.0
+radius = 22.2
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f7cbr"]
 shader = ExtResource("1_cxlvu")

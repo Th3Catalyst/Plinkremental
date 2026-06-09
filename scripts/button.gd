@@ -2,12 +2,11 @@ extends Button
 
 var auto: bool = false
 var counter: int = 0
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	$".".pressed.connect(_button_pressed)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _button_pressed() -> void:
 	auto = not auto
 	if auto:
@@ -17,6 +16,6 @@ func _button_pressed() -> void:
 	
 func _process(delta: float) -> void:
 	counter += 1
-	if auto and not counter % 100:
+	if auto and not counter % Game.delay:
 		counter = 0
 		Game.drop.emit()

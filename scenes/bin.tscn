@@ -34,18 +34,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_688sc"]
-size = Vector2(120, 120)
+size = Vector2(134, 132)
 
-[sub_resource type="LabelSettings" id="LabelSettings_688sc"]
+[sub_resource type="LabelSettings" id="LabelSettings_kk33v"]
 font_size = 40
-outline_size = 6
-outline_color = Color(0, 0, 0, 1)
 
 [node name="Bin" type="Node2D" unique_id=1611739356]
 metadata/multiplier = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1529475698]
-scale = Vector2(3.75, 3.75)
+scale = Vector2(4.1875, 4.1875005)
 sprite_frames = SubResource("SpriteFrames_tx5bq")
 autoplay = "default"
 frame_progress = 0.9931166
@@ -66,7 +64,7 @@ offset_top = -59.0
 offset_right = 58.0
 offset_bottom = 59.0
 text = "100"
-label_settings = SubResource("LabelSettings_688sc")
+label_settings = SubResource("LabelSettings_kk33v")
 horizontal_alignment = 1
 vertical_alignment = 1
 
