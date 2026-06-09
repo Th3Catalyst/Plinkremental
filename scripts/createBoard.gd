@@ -1,7 +1,6 @@
 extends Node2D
 
-# temporary until formulas are made for this
-var mult_vals: Array[float] = [3,41,10,5,3,1.5,1,0.7,0.5,0.5,0.7,1,1.5,3,5,10,41,3]
+var mult_vals: Array[float] = [110,41,10,5,3,1.5,1,0.7,0.3,0.3,0.7,1,1.5,3,5,10,41,110]
 
 func _ready() -> void:
 	# Pegs

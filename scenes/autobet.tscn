@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://00ren4c2ypxj"]
 
 [ext_resource type="Texture2D" uid="uid://bsemgb0a3asvd" path="res://res/autoOn.png" id="1_6peuo"]
-[ext_resource type="Script" uid="uid://bf2mwkris0mtt" path="res://scenes/button.gd" id="2_7q5ak"]
+[ext_resource type="Script" uid="uid://bf2mwkris0mtt" path="res://scripts/button.gd" id="2_7q5ak"]
 
 [node name="Autobet" type="Node2D" unique_id=1550706414]
 

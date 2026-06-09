@@ -17,8 +17,6 @@ func _button_pressed() -> void:
 	
 func _process(delta: float) -> void:
 	counter += 1
-	print(counter)
 	if auto and not counter % 100:
-		print(auto)
 		counter = 0
 		Game.drop.emit()

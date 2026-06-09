@@ -2,10 +2,11 @@
 
 [ext_resource type="Shader" uid="uid://kapptw4p7722" path="res://shaders/default.gdshader" id="1_cxlvu"]
 [ext_resource type="Texture2D" uid="uid://d80exfcpc2hm" path="res://res/ballFinal.png" id="2_cxlvu"]
+[ext_resource type="Script" uid="uid://cya5yvumwqld4" path="res://scripts/ballDespawn.gd" id="3_f7cbr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7s4qf"]
-friction = 0.36
-bounce = 0.45
+friction = 0.34
+bounce = 0.46
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7s4qf"]
 radius = 22.0
@@ -15,6 +16,7 @@ shader = ExtResource("1_cxlvu")
 
 [node name="Ball" type="Node2D" unique_id=127844270]
 metadata/value = 0.0
+metadata/despawn = 0
 
 [node name="BallBody" type="RigidBody2D" parent="." unique_id=1436180884]
 position = Vector2(8.75, -8.25)
@@ -32,3 +34,10 @@ material = SubResource("ShaderMaterial_f7cbr")
 position = Vector2(-8.75, 8.25)
 scale = Vector2(1.3749999, 1.3749999)
 texture = ExtResource("2_cxlvu")
+
+[node name="Timer" type="Timer" parent="BallBody" unique_id=1073748160]
+wait_time = 15.0
+one_shot = true
+autostart = true
+ignore_time_scale = true
+script = ExtResource("3_f7cbr")
