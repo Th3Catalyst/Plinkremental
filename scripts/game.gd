@@ -21,7 +21,7 @@ signal drop # fires when a ball should be dropped
 var money: float = 200.0: # player money
 	set = set_money # runs set_money when the money is changed
 var initial_money: float = money # initial money (used to reset the game)
-var delay: int = 200 # autobet delay in frames
+var delay: int = 170 # autobet delay in frames
 var initial_delay: int = delay # initial delay (used to reset the game)
 
 # array of possible modifiers to be added to the ball
