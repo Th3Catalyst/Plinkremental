@@ -3,6 +3,8 @@
 shader_type canvas_item;
 
 instance uniform float hue_shift : hint_range(0.0, 360.0) = 0.0;
+
+// non-AI
 instance uniform float saturation : hint_range(0.0, 1.0) = 1.0;
 instance uniform float value : hint_range(0.0, 1.0) = 1.0;
 
@@ -27,6 +29,8 @@ void fragment() {
     vec3 hsv = rgb_to_hsv(tex_color.rgb);
     
     hsv.x = fract(hsv.x + (hue_shift / 360.0));
+	
+	// non-AI
 	hsv.y *= saturation;
 	hsv.z *= value;
 	

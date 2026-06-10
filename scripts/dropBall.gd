@@ -13,7 +13,7 @@ func drop_ball() -> void:
 	if Game.money >= bet and bet > 0: 
 		var ball: Node2D = Game.ball_scene.instantiate() # makes a copy of the ball scene (one ball)
 		# picks a random modifier for the ball (weighted towards the low end of the list)
-		var ball_value_mod: float = Game.ball_mods[floor(abs(randfn(0, Game.mod_deviation)))]
+		var ball_value_mod: float = Game.ball_mods[floor(min(abs(randfn(0, Game.mod_deviation)), Game.ball_mods.size() - 1))]
 		var ball_value: float = bet + ball_value_mod # sets the new ball value with modifier
 		# picks a random spot at the top of the board to drop the ball 
 		# (weighted towards the center)
@@ -23,7 +23,7 @@ func drop_ball() -> void:
 			var mod_label: Label = Label.new() # creates a new label
 			mod_label.text = "+" + str(ball_value_mod) # sets the text to the mod value
 			mod_label.label_settings = load("res://res/modTextStyle.tres") # styles the label
-			mod_label.position = ball_position + Vector2(0, -90) # positions it above the ball
+			mod_label.position = ball_position + Vector2(0, -(90 + randf()*20)) # positions it above the ball
 			$".".get_parent().add_child(mod_label) # makes it a child of the main root node
 			
 			# creates a one second despawn timer for the label

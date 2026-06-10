@@ -38,7 +38,7 @@ var initial_mult_vals: Array[float] = mult_vals.duplicate()
 var bins: Array[Node2D] = [] # list of bins (populated by createBoard.gd)
 
 # upgrades the multiplier values (Multiplier Value upgrade function)
-func upgrade_mults(add_mult: float = 0.2) -> void:
+func upgrade_mults(add_mult: float = 0.5) -> void:
 	for i in range(mult_vals.size()): # iterates through the mult_vals
 		var val: float = mult_vals[i] # current mult value
 		var bin: Node2D = bins[i] # bin the value corresponds to
@@ -54,14 +54,14 @@ func upgrade_mults(add_mult: float = 0.2) -> void:
 
 # reduces autobet cooldown (Autobet Delay upgrade)
 func lower_cooldown() -> void:
-	delay *= 0.8 
+	delay *= 0.6 
 
 # makes modifiers worth more and more likely (Modifier Value function) 
 func upgrade_mods() -> void:
 	# makes each value in the ball mod list 30% greater
 	for i in range(1, ball_mods.size()):
-		ball_mods[i] = round(ball_mods[i] * 1.3 * 10) / 10
-	mod_deviation += 0.4 # makes it more likely to get a higher ball mod
+		ball_mods[i] = round(ball_mods[i] * 1.6 * 10) / 10
+	mod_deviation += 0.7 # makes it more likely to get a higher ball mod
 	
 # dicitonary containing all upgrades
 var upgrades: Dictionary[String,Dictionary] = {
