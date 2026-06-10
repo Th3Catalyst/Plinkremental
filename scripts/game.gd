@@ -21,7 +21,7 @@ signal drop # fires when a ball should be dropped
 var money: float = 200.0: # player money
 	set = set_money # runs set_money when the money is changed
 var initial_money: float = money # initial money (used to reset the game)
-var delay: int = 400 # autobet delay in frames
+var delay: int = 200 # autobet delay in frames
 var initial_delay: int = delay # initial delay (used to reset the game)
 
 # array of possible modifiers to be added to the ball
@@ -32,7 +32,7 @@ var initial_ball_mods: Array[float] = ball_mods.duplicate()
 var mod_deviation: float = 1.0 
 var initial_mod_deviation: float = mod_deviation # initial deviation (used to reset the game)
 # multiplier values for the bins
-var mult_vals: Array[float] = [110,41,10,5,3,1.5,1,0.7,0.3,0.3,0.7,1,1.5,3,5,10,41,110]
+var mult_vals: Array[float] = [110,41,10,5,3,1.5,1.2,0.7,0.5,0.5,0.7,1.2,1.5,3,5,10,41,110]
 # a copy of the initial list (used to reset the game)
 var initial_mult_vals: Array[float] = mult_vals.duplicate()
 var bins: Array[Node2D] = [] # list of bins (populated by createBoard.gd)
@@ -76,7 +76,7 @@ var upgrades: Dictionary[String,Dictionary] = {
 		"label": null
 	},
 	"Modifier Value": {
-		"cost": 300,
+		"cost": 100,
 		"effect": upgrade_mods,
 		"label": null
 	}
@@ -85,7 +85,7 @@ var upgrades: Dictionary[String,Dictionary] = {
 var initial_costs: Dictionary[String,int] = {
 	"Multiplier Value": 190,
 	"Autobet Delay": 100,
-	"Modifier Value": 300,
+	"Modifier Value": 100,
 }
 
 # runs when the money is changed
