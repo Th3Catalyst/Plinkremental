@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://xr7a3wt2pgur" path="res://res/8bitFONT.ttf" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://c6cfqli2h5rvh" path="res://scripts/createBoard.gd" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://bp0iqk7y30uew" path="res://scripts/dropBall.gd" id="3_h2yge"]
+[ext_resource type="LabelSettings" uid="uid://bg62elencgedh" path="res://res/mainTextStyle.tres" id="4_7mycd"]
 [ext_resource type="PackedScene" uid="uid://00ren4c2ypxj" path="res://scenes/autobet.tscn" id="5_lquwl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ig7tw"]
@@ -68,6 +69,14 @@ offset_right = 701.0
 offset_bottom = 773.0
 text = "Bet: $"
 label_settings = SubResource("LabelSettings_0xm2m")
+
+[node name="BetText2" type="Label" parent="." unique_id=1272559592]
+offset_left = 142.0
+offset_top = 2371.0
+offset_right = 1284.0
+offset_bottom = 2486.0
+text = "PRESS R to restart"
+label_settings = ExtResource("4_7mycd")
 
 [node name="BetInput" type="LineEdit" parent="." unique_id=1475456753]
 offset_left = 786.0

@@ -38,6 +38,7 @@ func _ready() -> void:
 		upgrade_label.position = Vector2(259, label_y)
 		upgrade_label.label_settings = load("res://res/mainTextStyle.tres")
 		add_child(upgrade_label)
+		value["label"] = upgrade_label
 		
 		var upgrade_button: Button = Button.new()
 		

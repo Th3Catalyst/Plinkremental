@@ -22,7 +22,6 @@ Game="*uid://cxy6qxw1braj3"
 
 window/size/viewport_width=4500
 window/size/viewport_height=2500
-window/size/resizable=false
 window/stretch/mode="viewport"
 
 [physics]
